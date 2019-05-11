@@ -8,7 +8,7 @@
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <link rel="stylesheet" href="index.css">
-	<svg width="1000" height="500"></svg>    
+    <svg width="1000" height="500" id="svg1"></svg>   
     <script>
 
     	/*
@@ -22,11 +22,10 @@
 		});
 		*/
 
-		var svg = d3.select("svg"),
+		var svg = d3.select("#svg1"),
         margin = 200,
         width = svg.attr("width") - margin,
         height = svg.attr("height") - margin;
-
 
         svg.append("text")
 	       .attr("transform", "translate(100,0)")
@@ -78,7 +77,8 @@
 	         .attr("width", xScale.bandwidth())
 	         .attr("height", function(d) { return height - yScale(d.values.value1); });
 
-    });
+   			 });
+
 
 
     </script>
